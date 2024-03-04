@@ -1,0 +1,12 @@
+<h1>Import Movies</h1>
+
+<%= form_with(url: import_movies_path, method: :post, multipart: true) do |form| %>
+  <div class="field">
+    <%= form.label :file %>
+    <%= form.file_field :file, accept: '.csv, .json' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Import', class: 'btn btn-primary' %>
+  </div>
+<% end %>
